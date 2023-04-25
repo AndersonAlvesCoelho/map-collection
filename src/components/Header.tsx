@@ -1,31 +1,15 @@
 // IMPORTS
 import { useState, useEffect } from "react";
 
+// CONTEXT
+import { useDarkMode } from "../context/DarkModeContext";
+
 //ASSETS
 import { Moon, Sun, Star, Clock, Paperclip, MapPin } from "lucide-react";
 
 export default function Header() {
-  const [theme, setTheme] = useState<string>("");
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
-  }, []);
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const { handleThemeSwitch, theme } = useDarkMode();
+ 
 
   return (
     <header className="items-center p-4 border-b-2 border-gray-400 shadow-sm bg-gray-100 dark:bg-gray-800 ">
