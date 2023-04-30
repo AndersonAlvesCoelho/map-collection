@@ -13,7 +13,7 @@ export default function Sidebar() {
           <span className="text-xl text-chamois-50">Banned Users</span>
         </h1>
 
-        {/* <SearchMapModal /> */}
+        <SearchMapModal />
 
         <hr className="my-4 md:min-w-full" />
 

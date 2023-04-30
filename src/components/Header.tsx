@@ -7,7 +7,7 @@ export default function Header() {
       <div className="w-full mx-auto items-center flex justify-between px-4">
         <a className="p-2 outline-0 rounded-md hover:outline-1 hover:bg-viridian-200 active:bg-viridian-500">
           <span className="sr-only">Home</span>
-          <MapPin color="black" size={32} />
+          <MapPin size={32} className="text-dune-900" />
         </a>
 
         <div className="flex items-center justify-between">
